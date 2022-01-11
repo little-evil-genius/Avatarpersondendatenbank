@@ -20,8 +20,8 @@ if(class_exists('MybbStuff_MyAlerts_AlertTypeManager')) {
 function faceclaims_database_info(){
 	return array(
 		"name"		=> "Avatarpersonendatenbank",
-		"description"	=> "Pluginbeschreibung",
-		"website"	=> "Webseite des Plugins (Herstellerseite)",
+		"description"	=> "Dieses Plugin erweitert das Board, um eine eigne Avatarpersonendatenbank. Ausgewählte Gruppen können Avatarpersonen hinzufügen, welche vom Team freigegeben werden müssen. Beim hinzufügen der Avatarperson werden verschiedene Informationen abgefragt. Man hat die Möglichkeit die Avatarpersonen nach verschiedenen Optionen zu filtern. Auch kann eingestellt werden, ob vergebene und reservierte Avatarpersonen besonders dargestellt werden.",
+		"website"	=> "https://github.com/little-evil-genius/Avatarpersondendatenbank",
 		"author"	=> "little.evil.genius",
 		"authorsite"	=> "https://storming-gates.de/member.php?action=profile&uid=1712",
 		"version"	=> "1.0",
