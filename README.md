@@ -7,7 +7,7 @@ Die Altersangabe der Avatarpersonen wird automatisch ermittelt. Beim erstellen v
 <br>
 Auch kann das Team eine Zufallsseite aktivieren, wo den Usern zufällige Einträge aus der Datenbank angezeigt werden. Wie viele auf dieser Seite angezeigt werden kann auch in den Einstellungen festgehalten werden. Auch kann eingestellt werden, ob vergebene und reservierte Avatarpersonen besonders dargestellt werden. Ich habe mich für eine blassere Darstellung entschieden. Sprich sie werden weiterhin angezeigt in der Auflistung. Die vergebene Avatarpersonen werden über ein Profilfeld abgefragt. Für die Option mit reservierten Avatare benötigt man das Reservierungsplugin von Katja. Oder eigene PHP Kenntnisse, um die Abfrage umzuschreiben.<br><br>
 Die einzelnen Seiten, außer die Zufallsseite können als Multipage dargestellt werden. Dies bedeutet, dass die ausgelesenen Avatarpersonen auf mehrere Seite angezeigt werde, wie zB bei der Mitgliederliste. Dies kann nach Belieben vom Team an und ausgestellt werden und auch die Anzahl, wie viele Avatarpersonen pro Seite angezeigt werden kann vom Team bestimmt werden. Ich lege den Teamies diese Option ans Herz, da wenn ihr eine Menge an Einträgen habt diese alle aufeinmal anzeigen lasst könnte es einige Browser und Internetleitungen ziemlich überfordern.<br><br>
-Das Bearbeiten von Avatarpersoneneinträgen ist nur dem Team gestattet. 
+Das Bearbeiten von Avatarpersoneneinträgen ist nur dem Team gestattet. Alle Texte sind in der Sprachdatei gespeichert und können dort angepasst werden. Das Design ist sehr simple aufgebaut und kann komplett geändert werden. 
 
 # Datenbank-Änderungen
 Hinzugefügte Tabellen:
