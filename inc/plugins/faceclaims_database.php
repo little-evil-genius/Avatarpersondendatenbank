@@ -274,6 +274,7 @@ function faceclaims_database_install(){
 			{$fd_menu_add}
 			<tr><td class="trow1">{$lang->faceclaims_database_menu_all}</td></tr>
 			<tr><td class="trow1">{$lang->faceclaims_database_menu_filterpage}</td></tr>
+			{$fd_menu_random}
 			<tr><td class="thead">{$lang->faceclaims_database_menu_filters}</td></tr>
 			<tr><td class="tcat">{$lang->faceclaims_database_menu_filters_gender}</td></tr>
 			<tr><td>{$fd_menu_gender}</td></tr>
