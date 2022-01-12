@@ -37,17 +37,17 @@ function faceclaims_database_install(){
     // DATENBANK HINZUFÜGEN
 	$db->query("CREATE TABLE ".TABLE_PREFIX."faceclaims_database(
         `fdid` int(10) NOT NULL AUTO_INCREMENT,
-		`faceclaim` VARCHAR(500) NOT NULL,
-		`image` VARCHAR(500) NOT NULL,
-		`birthday` VARCHAR(10) NOT NULL,
-		`origin` VARCHAR(500) NOT NULL,
-		`haircolor` VARCHAR(500) NOT NULL,
+	`faceclaim` VARCHAR(500) NOT NULL,
+	`image` VARCHAR(500) NOT NULL,
+	`birthday` VARCHAR(10) NOT NULL,
+	`origin` VARCHAR(500) NOT NULL,
+	`haircolor` VARCHAR(500) NOT NULL,
         `gender` VARCHAR(500) NOT NULL,
-		`special` VARCHAR(500) NOT NULL,
-		`mediabase` VARCHAR(1000) NOT NULL,
-		`gallery` VARCHAR(500) NOT NULL,
-		`accepted` int(1) NOT NULL,
-		`sendedby` int(10) NOT NULL,
+	`special` VARCHAR(500) NOT NULL,
+	`mediabase` VARCHAR(1000) NOT NULL,
+	`gallery` VARCHAR(500) NOT NULL,
+	`accepted` int(1) NOT NULL,
+	`sendedby` int(10) NOT NULL,
         PRIMARY KEY(`fdid`),
         KEY `fdid` (`fdid`)
         )
@@ -1259,7 +1259,7 @@ function faceclaims_database_modcp() {
         }
 
             $db->delete_query("faceclaims_database", "fdid = '$delete'");
-            redirect("modcp.php?action=faceclaims_database");
+            redirect("modcp.php?action=faceclaims_database", $lang->faceclaims_database_redirect_modcp_delete);
         }
 
         //Der Eintag wurde vom Team angenommen
@@ -1283,7 +1283,7 @@ function faceclaims_database_modcp() {
         }
 
             $db->query("UPDATE ".TABLE_PREFIX."faceclaims_database SET accepted = 1 WHERE fdid = '".$accept."'");
-            redirect("modcp.php?action=faceclaims_database");
+            redirect("modcp.php?action=faceclaims_database", $lang->faceclaims_database_redirect_modcp_accept);
         }
 		 
         // TEMPLATE FÜR DIE SEITE
