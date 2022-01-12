@@ -440,7 +440,7 @@ if($mybb->input['action'] == "filter") {
 
     $faceclaims_count = 0;
 
-    $type_url = htmlspecialchars_uni("faceclaims_database.php?action=filter&filter_gender=$gender_filters&filter_origin=$origin_filters&filter_haircolor=$haircolor_filters&age_start=$age_start&age_end=$age_end");
+    $type_url = htmlspecialchars_uni("faceclaims_database.php?action=filter&filter_gender=$gender_filters&filter_origin=$origin_filters&filter_haircolor=$haircolor_filters&age_start=$age_start&age_end=$age_end&firstletter=$firstletter&fullname=$fullname");
 
     $countfaceclaims = $db->fetch_field($db->query("SELECT COUNT(fdid) AS faceclaims FROM ".TABLE_PREFIX."faceclaims_database 
     WHERE gender LIKE '".$gender_filters."' 
