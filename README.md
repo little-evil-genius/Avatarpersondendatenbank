@@ -59,6 +59,7 @@ Hinzugefügte Tabellen:
 - Listen PHP (Navigation Ergänzung)
 
 # Neues CSS - faceclaims_database.css
+Wird automatisch in jedes bestehende und neue Design hinzugefügt. Man sollte es einfach einmal abspeichern, bevor man im Board mit der <b>Untersuchungsfunktion</b> dies bearbeiten will, da es dann passieren kann, dass das CSS für dieses Plugin in ein anderen Stylesheet gerutscht ist, obwohl es im ACP richtig ist. 
 
 # Voraussetzungen
 - Eingebundene Icons von Fontawesome (kann man sonst auch in den Templates ändern)
