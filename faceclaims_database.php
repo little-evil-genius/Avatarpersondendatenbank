@@ -1146,7 +1146,7 @@ foreach ($faceclaims_database_origin as $fd_origin) {
         $filter_title = $fd_origin;
 
         $countfaceclaims = $db->fetch_field($db->query("SELECT COUNT(fdid) AS faceclaims FROM ".TABLE_PREFIX."faceclaims_database  
-        WHERE origin LIKE '$fd_origin' AND accepted != '0'"), "faceclaims");
+        WHERE origin LIKE '%$fd_origin%' AND accepted != '0'"), "faceclaims");
 
         if ($countfaceclaims == 1) {
             $lang->faceclaims_database_faceclaim_count = $lang->sprintf($lang->faceclaims_database_faceclaim_count, $countfaceclaims, 'Avatarperson');
