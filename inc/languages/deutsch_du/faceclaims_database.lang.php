@@ -95,6 +95,8 @@ $l['faceclaims_database_redirect_random'] = 'Die zufällige Ausgabe von Avatarpe
 $l['faceclaims_database_redirect_uninstall'] = 'Die Avatarpersonendatenbank wurde vom Team nicht installiert! Du wirst nun auf die Hauptseite vom Board zurückgeleitet!';
 $l['faceclaims_database_redirect_add_error'] = 'Du hast keine Berechtigung diese Avatarperson zu bearbeiten! Du wirst nun auf die Hauptseite der Avatarpersonendatenbank zurückgeleitet!';
 $l['faceclaims_database_redirect_edit_error'] = 'Du hast keine Berechtigung Avatarpersonen zur Datenbank hinzu zu fügen! Du wirst nun auf die Hauptseite der Avatarpersonendatenbank zurückgeleitet!';
+$l['faceclaims_database_redirect_modcp_delete'] = 'Du hast erfolgreich den Vorschlag für die Avatarpersonendatenbank abgelehnt und gelöscht! Du wirst nun ins Modcp zurückgeleitet!';
+$l['faceclaims_database_redirect_modcp_accept'] = 'Du hast erfolgreich den Vorschlag für die Avatarpersonendatenbank angenommen! Du wirst nun ins Modcp zurückgeleitet!';
 
 // MyALERTS
 $l['faceclaims_database_delete'] = '{1} hat deine Avatarperson <strong>"{4}"</strong> abgelehnt!';
