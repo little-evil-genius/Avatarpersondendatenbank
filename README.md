@@ -77,10 +77,10 @@ Hinzugefügte Tabellen:
 - euerforum.de/modcp.php?action=faceclaims_database
 
 # Demo
-Hauptmenü<p></p>
+Hauptmenü</p>
 <img src="https://www.bilder-hochladen.net/files/m4bn-aw-de58.png">
 
-(Default-) Filtermenü
+(Default-) Filtermenü</p>
 <img src="https://www.bilder-hochladen.net/files/big/m4bn-av-f0c2.png">
 
 Maske beim Hinzufügen
