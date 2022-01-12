@@ -94,7 +94,7 @@ Filter Maske auf der Filterseite
 <img src="https://www.bilder-hochladen.net/files/big/m4bn-au-9f7b.png">
 
 Teamhinweis 
-<img src="https://www.bilder-hochladen.net/files/m4bn-ay-eb7f.png">
+<img src="https://www.bilder-hochladen.net/files/m4bn-b2-3a3a.png">
 
 Modcp</p>
 <img src="https://www.bilder-hochladen.net/files/big/m4bn-ax-c54e.png">
