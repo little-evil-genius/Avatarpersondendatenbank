@@ -1,7 +1,7 @@
 <?php
 
 // TEAM MELDUNG AUF DEM INDEX
-$l['newentry_faceclaims_database_headerbanner'] = '<div class="red_alert"><a href="modcp.php?action=faceclaims_database"><b>{1} {2} {3}</b> für die Avatarpersonendatenbank müssen freigeschaltet werden!</a></div>';
+$l['newentry_faceclaims_database_headerbanner'] = '<div class="red_alert"><a href="modcp.php?action=faceclaims_database"><b>{1} {2} {3}</b> für die Avatarpersonendatenbank {4} freigeschaltet werden!</a></div>';
 
 // MODCP
 $l['faceclaims_database_modcp_nav'] = 'Avatarpersonen freischalten';
