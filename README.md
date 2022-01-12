@@ -77,3 +77,23 @@ Hinzugefügte Tabellen:
 - euerforum.de/modcp.php?action=faceclaims_database
 
 # Demo
+Hauptmenü<p></p>
+<img src="https://www.bilder-hochladen.net/files/m4bn-aw-de58.png">
+
+(Default-) Filtermenü
+<img src="https://www.bilder-hochladen.net/files/big/m4bn-av-f0c2.png">
+
+Maske beim Hinzufügen
+<img src="https://www.bilder-hochladen.net/files/big/m4bn-as-9ec1.png">
+
+Anzeige der Avatare - normal und einmal vergeben (Emma Roberts)
+<img src="https://www.bilder-hochladen.net/files/big/m4bn-at-2726.png">
+
+Filter Maske auf der Filterseite
+<img src="https://www.bilder-hochladen.net/files/big/m4bn-au-9f7b.png">
+
+Teamhinweis 
+<img src="https://www.bilder-hochladen.net/files/m4bn-ay-eb7f.png">
+
+Modcp
+<img src="https://www.bilder-hochladen.net/files/big/m4bn-ax-c54e.png">
