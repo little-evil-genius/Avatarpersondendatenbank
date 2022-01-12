@@ -98,3 +98,6 @@ Teamhinweis
 
 Modcp</p>
 <img src="https://www.bilder-hochladen.net/files/big/m4bn-ax-c54e.png">
+
+MyAlerts Benachrichtigung</p>
+<img src="https://www.bilder-hochladen.net/files/m4bn-b0-288f.png">
