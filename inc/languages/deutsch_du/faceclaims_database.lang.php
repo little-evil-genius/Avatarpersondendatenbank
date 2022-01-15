@@ -85,7 +85,7 @@ $l['faceclaims_database_menu_filters_origin_entry'] = "<tr><td class='trow1'>&ra
 $l['faceclaims_database_menu_filters_haircolor'] = 'nach Haarfarbe';
 $l['faceclaims_database_menu_filters_haircolor_entry'] = "<tr><td class='trow1'>&raquo; <a href='faceclaims_database.php?filters={1}'>{2}</a> </td></tr>";
 $l['faceclaims_database_menu_filters_age'] = 'nach Alter';
-$l['faceclaims_database_menu_filters_age_entry'] = "<tr><td class='trow1'>&raquo; <a href='faceclaims_database.php?filters={1}-{2}'>{3} bis {2} Jahre</a> </td></tr>";
+$l['faceclaims_database_menu_filters_age_entry'] = "<tr><td class='trow1'>&raquo; <a href='faceclaims_database.php?filters={1}-{2}'>{3} bis {4} Jahre</a> </td></tr>";
 
 // WEITERLEITUNGSSEITEN
 $l['faceclaims_database_redirect_add'] = 'Die Avatarperson wurde erfolgreich hinzugefügt! Du wirst nun auf die Hauptseite zurückgeleitet!';
