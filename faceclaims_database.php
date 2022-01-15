@@ -113,12 +113,16 @@ $age_string = "1, 10, 20, 30, 40, 50, 60, 70, 80, 90";
 $faceclaims_database_age_string = explode (", ", $age_string);
 foreach ($faceclaims_database_age_string as $fd_age_menu) {
 
-    $fd_age_end = $fd_age_menu + 9;
+    if ($fd_age_menu == 1) {
+        $fd_age_end = $fd_age_menu + 8;
+    } else {
+        $fd_age_end = $fd_age_menu + 9;
+    }
 
     if ($fd_age_menu == 1) {
-        $entry = $lang->sprintf($lang->faceclaims_database_menu_filters_age_entry, $fd_age_menu, $fd_age_end, "01");
+        $entry = $lang->sprintf($lang->faceclaims_database_menu_filters_age_entry, $fd_age_menu, $fd_age_end, "01", "09");
     } else {
-        $entry = $lang->sprintf($lang->faceclaims_database_menu_filters_age_entry, $fd_age_menu, $fd_age_end, $fd_age_menu);
+        $entry = $lang->sprintf($lang->faceclaims_database_menu_filters_age_entry, $fd_age_menu, $fd_age_end, $fd_age_menu, $fd_age_end);
     }
     
     eval("\$fd_menu_age .= \"".$templates->get("faceclaims_database_menu_cat")."\";");
@@ -567,7 +571,7 @@ if($mybb->input['action'] == "filter") {
 
         if ($faceclaims_database_gallery == 1) {
 
-            if ($faceclaim['gallery'] != '') {
+            if ($filters['gallery'] != '') {
                 $gallery = $lang->sprintf($lang->faceclaims_database_faceclaim_bit_gallery, $filters['gallery']);
             } else {
                 $gallery = $lang->sprintf($lang->faceclaims_database_faceclaim_bit_gallery_none);
@@ -1519,7 +1523,11 @@ foreach ($faceclaims_database_haircolor as $fd_haircolor) {
 // 1 - 9, 10 - 19, 20 - 29, 30 - 39, 40 - 49, 50 - 59, 60 - 69, 70 - 79, 80 - 89, 90 - 99
 foreach ($faceclaims_database_age_string as $fd_age_start) {
 
-    $fd_age_end = $fd_age_start + 9;
+    if ($fd_age_start == 1) {
+        $fd_age_end = $fd_age_start + 8;
+    } else {
+        $fd_age_end = $fd_age_start + 9;
+    }
 
     if($mybb->input['filters'] == "$fd_age_start-$fd_age_end") {
 
@@ -1529,16 +1537,24 @@ foreach ($faceclaims_database_age_string as $fd_age_start) {
 
         $filter_title = "$fd_age_start bis $fd_age_end Jahre alte";
 
-        if ($faceclaims_database_age_limit == 1) {
-            $year_start = $aktuellesJahr - $fd_age_start - $faceclaims_database_age_limit_number; 
-            $year_end = $aktuellesJahr - $fd_age_end - $faceclaims_database_age_limit_number;
-        } else {
-            $year_start = $aktuellesJahr - $fd_age_start; 
-            $year_end = $aktuellesJahr - $fd_age_end;
-        }
+        $year_start = $aktuellesJahr - $fd_age_end; 
+        $year_end = $aktuellesJahr - $fd_age_start;
 
-        $countfaceclaims = $db->fetch_field($db->query("SELECT COUNT(fdid) AS faceclaims FROM ".TABLE_PREFIX."faceclaims_database  
-        WHERE birthday BETWEEN '$year_end' AND '$year_start' AND accepted != '0'"), "faceclaims");
+        if ($faceclaims_database_age_limit == 1) {
+      
+            $countfaceclaims = $db->fetch_field($db->query("SELECT COUNT(fdid) AS faceclaims FROM ".TABLE_PREFIX."faceclaims_database  
+            WHERE (birthday + $faceclaims_database_age_limit_number) BETWEEN $year_start AND $year_end
+            OR (birthday - $faceclaims_database_age_limit_number) BETWEEN $year_start AND $year_end
+            OR birthday BETWEEN $year_start AND $year_end
+            AND accepted != '0'"), "faceclaims");
+
+        } else {
+      
+            $countfaceclaims = $db->fetch_field($db->query("SELECT COUNT(fdid) AS faceclaims FROM ".TABLE_PREFIX."faceclaims_database  
+            WHERE birthday BETWEEN $year_start AND $year_end
+            AND accepted != '0'"), "faceclaims");
+
+        }
 
         if ($countfaceclaims == 1) {
             $lang->faceclaims_database_faceclaim_count = $lang->sprintf($lang->faceclaims_database_faceclaim_count, $countfaceclaims, 'Avatarperson');
@@ -1570,27 +1586,57 @@ foreach ($faceclaims_database_age_string as $fd_age_start) {
             $multipage = "";	
         }
 
-        // ABFRAGE ALLER AVATARPERSONEN - MULTIPAGE
-        if ($faceclaims_database_multipage_setting == 1) {
-            $faceclaims_haircolor =$db->query("SELECT * FROM ".TABLE_PREFIX."faceclaims_database fd
-            WHERE birthday BETWEEN '$year_end' AND '$year_start'
-            AND accepted != '0'
-            ORDER BY faceclaim ASC
-            LIMIT $start, $perpage
-            ");
-        } 
-        // ABFRAGE ALLER AVATARPERSONEN - OHNE MULTIPAGE
+        // MIT ALTERSGRENZE
+        if ($faceclaims_database_age_limit == 1) {
+
+            // ABFRAGE ALLER AVATARPERSONEN - MULTIPAGE
+            if ($faceclaims_database_multipage_setting == 1) {
+                $faceclaims_age =$db->query("SELECT * FROM ".TABLE_PREFIX."faceclaims_database fd
+                WHERE (birthday + $faceclaims_database_age_limit_number) BETWEEN $year_start AND $year_end
+                OR (birthday - $faceclaims_database_age_limit_number) BETWEEN $year_start AND $year_end
+                OR birthday BETWEEN $year_start AND $year_end
+                AND accepted != '0'
+                ORDER BY faceclaim ASC
+                LIMIT $start, $perpage
+                ");
+            } 
+            // ABFRAGE ALLER AVATARPERSONEN - OHNE MULTIPAGE
+            else {
+                $faceclaims_age =$db->query("SELECT * FROM ".TABLE_PREFIX."faceclaims_database fd
+                WHERE (birthday + $faceclaims_database_age_limit_number) BETWEEN $year_start AND $year_end
+                OR (birthday - $faceclaims_database_age_limit_number) BETWEEN $year_start AND $year_end
+                OR birthday BETWEEN $year_start AND $year_end
+                AND accepted != '0'
+                ORDER BY faceclaim ASC       
+                ");
+            }
+
+        }
         else {
-            $faceclaims_haircolor =$db->query("SELECT * FROM ".TABLE_PREFIX."faceclaims_database fd
-            WHERE birthday BETWEEN '$year_end' AND '$year_start'
-            AND accepted != '0'
-            ORDER BY faceclaim ASC       
-            ");
+
+            // ABFRAGE ALLER AVATARPERSONEN - MULTIPAGE
+            if ($faceclaims_database_multipage_setting == 1) {
+                $faceclaims_age =$db->query("SELECT * FROM ".TABLE_PREFIX."faceclaims_database fd
+                WHERE birthday BETWEEN $year_start AND $year_end
+                AND accepted != '0'
+                ORDER BY faceclaim ASC
+                LIMIT $start, $perpage
+                ");
+            } 
+            // ABFRAGE ALLER AVATARPERSONEN - OHNE MULTIPAGE
+            else {
+                $faceclaims_age =$db->query("SELECT * FROM ".TABLE_PREFIX."faceclaims_database fd
+                WHERE birthday BETWEEN $year_start AND $year_end
+                AND accepted != '0'
+                ORDER BY faceclaim ASC       
+                ");
+            }
+
         }
 
         eval("\$fd_faceclaim_none .= \"".$templates->get("faceclaims_database_faceclaim_none")."\";");
          
-        while ($faceclaim = $db->fetch_array ($faceclaims_haircolor)) {
+        while ($faceclaim = $db->fetch_array ($faceclaims_age)) {
 
             $fd_faceclaim_none = "";
     
