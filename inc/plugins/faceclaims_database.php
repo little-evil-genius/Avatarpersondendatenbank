@@ -254,11 +254,9 @@ function faceclaims_database_install(){
 
     $insert_array = array(
         'title'		=> 'faceclaims_database_menu_cat',
-        'template'	=> $db->escape_string('<div class="wikipanel">
-		<table width="100%">
+        'template'	=> $db->escape_string('<table width="100%">
 	  {$entry}
-	  </table>
-	  </div>'),
+	  </table>'),
         'sid'		=> '-1',
         'version'	=> '',
         'dateline'	=> TIME_NOW
