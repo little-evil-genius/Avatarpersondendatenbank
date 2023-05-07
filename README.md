@@ -80,26 +80,26 @@ Wird automatisch in jedes bestehende und neue Design hinzugefügt. Man sollte es
 - euerforum.de/modcp.php?action=faceclaims_database
 
 # Demo
-Hauptmenü</p>
-<img src="https://www.bilder-hochladen.net/files/m4bn-aw-de58.png">
+Hauptmenü
+<img src="https://stormborn.at/plugins/avatarpersonendatenbank_menu.png">
 
-(Default-) Filtermenü</p>
-<img src="https://www.bilder-hochladen.net/files/big/m4bn-av-f0c2.png">
+(Default-) Filtermenü
+<img src="https://stormborn.at/plugins/avatarpersonendatenbank_filtermenu.png">
 
 Maske beim Hinzufügen
-<img src="https://www.bilder-hochladen.net/files/big/m4bn-as-9ec1.png">
+<img src="https://stormborn.at/plugins/avatarpersonendatenbank_add.png">
 
 Anzeige der Avatare - normal und einmal vergeben (Emma Roberts)
-<img src="https://www.bilder-hochladen.net/files/big/m4bn-at-2726.png">
+<img src="https://stormborn.at/plugins/avatarpersonendatenbank_anzeige.png">
 
 Filter Maske auf der Filterseite
-<img src="https://www.bilder-hochladen.net/files/big/m4bn-au-9f7b.png">
+<img src="https://stormborn.at/plugins/avatarpersonendatenbank_filter.png">
 
 Teamhinweis 
-<img src="https://www.bilder-hochladen.net/files/m4bn-b2-3a3a.png">
+<img src="https://stormborn.at/plugins/avatarpersonendatenbank_alert.png">
 
-Modcp</p>
-<img src="https://www.bilder-hochladen.net/files/big/m4bn-ax-c54e.png">
+Modcp
+<img src="https://stormborn.at/plugins/avatarpersonendatenbank_modcp.png">
 
 MyAlerts Benachrichtigung</p>
-<img src="https://www.bilder-hochladen.net/files/m4bn-b0-288f.png">
+<img src="https://stormborn.at/plugins/avatarpersonendatenbank_alerts.png">
