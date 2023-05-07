@@ -80,25 +80,25 @@ Wird automatisch in jedes bestehende und neue Design hinzugefügt. Man sollte es
 - euerforum.de/modcp.php?action=faceclaims_database
 
 # Demo
-Hauptmenü
+Hauptmenü<p>
 <img src="https://stormborn.at/plugins/avatarpersonendatenbank_menu.png">
 
-(Default-) Filtermenü
+(Default-) Filtermenü<p>
 <img src="https://stormborn.at/plugins/avatarpersonendatenbank_filtermenu.png">
 
-Maske beim Hinzufügen
+Maske beim Hinzufügen<p>
 <img src="https://stormborn.at/plugins/avatarpersonendatenbank_add.png">
 
-Anzeige der Avatare - normal und einmal vergeben (Emma Roberts)
+Anzeige der Avatare - normal und einmal vergeben (Emma Roberts)<p>
 <img src="https://stormborn.at/plugins/avatarpersonendatenbank_anzeige.png">
 
-Filter Maske auf der Filterseite
+Filter Maske auf der Filterseite<p>
 <img src="https://stormborn.at/plugins/avatarpersonendatenbank_filter.png">
 
-Teamhinweis 
+Teamhinweis <p>
 <img src="https://stormborn.at/plugins/avatarpersonendatenbank_alert.png">
 
-Modcp
+Modcp<p>
 <img src="https://stormborn.at/plugins/avatarpersonendatenbank_modcp.png">
 
 MyAlerts Benachrichtigung</p>
