@@ -227,17 +227,17 @@ if($mybb->input['action'] == "do_add") {
             error($lang->faceclaims_database_add_error);
         } elseif (strpos($name, $_POST['faceclaim']) === FALSE) {
             $new_faceclaim = array(
-                "faceclaim" => $_POST['faceclaim'],
-                "image" => $_POST['image'],
-                "birthday" => $_POST['birthday'],
-                "origin" => $origins_string,
-                "haircolor" => $haircolors_string,
-                "gender" => $_POST['gender'],
-                "special" => $_POST['special'],
-                "mediabase" => $_POST['mediabase'], 
-                "gallery" => $_POST['gallery'],
+                "faceclaim" => $db->escape_string($_POST['faceclaim']),
+                "image" => $db->escape_string($_POST['image']),
+                "birthday" => $db->escape_string($_POST['birthday']),
+                "origin" => $db->escape_string($origins_string),
+                "haircolor" => $db->escape_string($haircolors_string),
+                "gender" => $db->escape_string($_POST['gender']),
+                "special" => $db->escape_string($_POST['special']),
+                "mediabase" => $db->escape_string($_POST['mediabase']), 
+                "gallery" => $db->escape_string($_POST['gallery']),
                 "sendedby" => (int)$mybb->user['uid'],
-                "accepted" => $accepted,
+                "accepted" => (int)$accepted,
             );  
         }
 
@@ -351,15 +351,15 @@ if($mybb->input['action'] == "faceclaim_edit") {
         }
 
         $faceclaim_edit = array(
-            "faceclaim" => $_POST['faceclaim'],
-            "image" => $_POST['image'],
-            "birthday" => $_POST['birthday'],
-            "origin" => $origins_string,
-            "haircolor" => $haircolors_string,
-            "gender" => $_POST['gender'],
-            "special" => $_POST['special'],
-            "mediabase" => $_POST['mediabase'],
-            "gallery" => $_POST['gallery']
+            "faceclaim" => $db->escape_string($_POST['faceclaim']),
+            "image" => $db->escape_string($_POST['image']),
+            "birthday" => $db->escape_string($_POST['birthday']),
+            "origin" => $db->escape_string($origins_string),
+            "haircolor" => $db->escape_string($haircolors_string),
+            "gender" => $db->escape_string($_POST['gender']),
+            "special" => $db->escape_string($_POST['special']),
+            "mediabase" => $db->escape_string($_POST['mediabase']),
+            "gallery" => $db->escape_string($_POST['gallery'])
         );
         
         $db->update_query("faceclaims_database", $faceclaim_edit, "fdid = '".$fdid."'");
@@ -630,6 +630,11 @@ if($mybb->input['action'] == "all") {
     add_breadcrumb($lang->faceclaims_database_faceclaim_all);
 
     $countfaceclaims = $db->fetch_field($db->query("SELECT COUNT(fdid) AS faceclaims FROM ".TABLE_PREFIX."faceclaims_database WHERE accepted != '0'"), "faceclaims");
+
+    $countfaceclaims = $db->query("SELECT COUNT(*) AS anzahl FROM mybb_threads
+    WHERE fid = '69' 
+    AND uid = '".$uid."'
+    ");
 
     if ($countfaceclaims == 1) {
         $lang->faceclaims_database_faceclaim_count = $lang->sprintf($lang->faceclaims_database_faceclaim_count, $countfaceclaims, 'Avatarperson');
