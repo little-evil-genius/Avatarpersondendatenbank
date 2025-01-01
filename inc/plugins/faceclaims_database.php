@@ -1090,7 +1090,7 @@ function faceclaims_database_settings_change(){
 
     $result = $db->simple_select('settinggroups', 'gid', "name='faceclaims_database'", array("limit" => 1));
     $group = $db->fetch_array($result);
-    $faceclaims_database_settings_peeker = ($mybb->input['gid'] == $group['gid']) && ($mybb->request_method != 'post');
+    $faceclaims_database_settings_peeker = ($mybb->get_input('gid') == $group['gid']) && ($mybb->request_method != 'post');
 }
 function faceclaims_database_settings_peek(&$peekers){
     global $mybb, $faceclaims_database_settings_peeker;
